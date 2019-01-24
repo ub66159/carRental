@@ -41,11 +41,11 @@ public class RentalAgent {
 		return durations;
 	}
 
-	public Optional<Double> bookCar(String type, String lic, String[][] dStrings) {
+	public Optional<Reservation> bookCar(String type, String lic, String[][] dStrings) {
 
 		List<Vehicle> cars = getAvailableCars();
 
-		Optional<Double> optional = Optional.empty();
+		Optional<Reservation> optional = Optional.empty();
 		Reservation res = null;
 		ArrayList<RentalDuration> durations = buildDurations(dStrings);
 		for (Vehicle car : cars) {
@@ -55,7 +55,7 @@ public class RentalAgent {
 				res = new Reservation(car, lic, durations);
 				res.calculatePayment();
 				// reservations.add(res);
-				optional = Optional.ofNullable(res.getPrice());
+				optional = Optional.ofNullable(res);
 
 				break;
 			}

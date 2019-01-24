@@ -64,6 +64,12 @@ public class RentalDuration {
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "RentalDuration [pickupDate=" + pickupDate + ", dropoffDate=" + dropoffDate + "]";
+	}
+	
 	
 	
 }

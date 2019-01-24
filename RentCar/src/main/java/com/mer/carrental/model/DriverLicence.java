@@ -23,5 +23,10 @@ public class DriverLicence {
 		super();
 		this.licenceNo = licenceNo;
 	}
+
+	@Override
+	public String toString() {
+		return "DriverLicence [licenceNo=" + licenceNo + "]";
+	}
 	
 }

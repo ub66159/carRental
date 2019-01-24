@@ -3,6 +3,7 @@ package com.mer.carrental.app;
 import java.util.Optional;
 
 import com.mer.carrental.model.Inventory;
+import com.mer.carrental.model.Reservation;
 import com.mer.carrental.service.RentalAgent;
 
 public class RentalApplication {
@@ -16,9 +17,9 @@ public class RentalApplication {
 
 		RentalAgent agent = new RentalAgent();
 		Inventory.buildFleet();
-		Optional<Double> re = agent.bookCar("Luxury", "C12345", durationArray);
+		Optional<Reservation> re = agent.bookCar("Luxury", "C12345", durationArray);
 
-		double paymentDue = re.get();
-		System.out.println(paymentDue);
+//		double paymentDue = re.get();
+		System.out.println(re.get().toString());
 	}
 }

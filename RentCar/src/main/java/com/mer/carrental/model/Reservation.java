@@ -76,6 +76,8 @@ public Reservation(Vehicle car, String licNo, ArrayList<RentalDuration> reserves
 		
 	}
 	
+	
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;
@@ -112,4 +114,11 @@ public Reservation(Vehicle car, String licNo, ArrayList<RentalDuration> reserves
 			return false;
 		return true;
 	}
+
+	@Override
+	public String toString() {
+		return "Reservation [lic=" + lic + ", car=" + car + ", periods=" + periods + ", price=" + price + "]";
+	}
+	
+	
 }

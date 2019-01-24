@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.mer.carrental.model.Inventory;
+import com.mer.carrental.model.Reservation;
 import com.mer.carrental.service.RentalAgent;
 
 public class RentalApplicationTests {
@@ -28,7 +29,8 @@ public class RentalApplicationTests {
 //				{ "2019-01-16", "2019-01-17" },
 				{ "2019-01-21", "2019-01-22" } };
 		
-		Optional<Double> re = agent.bookCar("Luxury", "C12345", durationArray);
+		Optional<Reservation> re = agent.bookCar("Luxury", "C12345", durationArray);
 		assertNotNull(re.get());
+		System.out.println(re.get().toString());
 	}
 }
